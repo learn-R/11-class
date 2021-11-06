@@ -234,7 +234,7 @@ check_outliers(model1)
 
 ## 4.2 Ajuste del modelo{#fit}
 
-Sabemos por la [práctica 5](https://multivariada.netlify.app/assignment/05-code/) que podemos evaluar qué tan bien ajustan nuestros modelos con los datos utilizados. Sabemos que:
+Podemos evaluar qué tan bien ajustan nuestros modelos con los datos utilizados. Sabemos que:
 
 2.1 Si trabajamos una regresión lineal: el $R^2$ ajustado
 
@@ -359,7 +359,7 @@ model_robust<- lmtest::coeftest(model1, vcov=sandwich::vcovHC(model1))
 
 ### 4.2.5 Creación de índices
 
-En el [tutorial de dplyr](https://www.youtube.com/watch?v=APzU10EMMjg&t=321s) ya habíamos abordado este punto. También está desarrollado de manera extensa en el [práctico N°1](https://multivariada.netlify.app/assignment/01-code/#bonus-track-generaci%C3%B3n-de-%C3%ADndices). Por ello, solo lo cacularemos para aquellos ítems que mostraron posibilidad de ser colineales. Los pasos son
+Se debe cacular para aquellos ítems que mostraron posibilidad de ser colineales. Los pasos son
 
 1. **Correlacionar** para verificar que estamos ante la presencia de ítems que podrían estar midiendo un constructo común. Como vemos en la siguiente tabla, las correlaciones son altas
 
@@ -381,7 +381,7 @@ movid_proc <- movid_proc %>%
 
 ### 4.2.6 Eliminar casos influyentes
 
-En caso de que estemos ante la prescencia de casos influyentes debemos seguir los siguientes pasos
+En caso de que estemos ante la presencia de casos influyentes debemos seguir los siguientes pasos
 
 ```{r, eval = F }
 n<- nobs(model1) #n de observaciones
